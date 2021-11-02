@@ -37,8 +37,6 @@ class SuppliesTableViewCell: UITableViewCell {
      
     @IBAction func onPress(_ sender: Any) {
     
-//        UserDefaults.standard.set(Title.text, forKey: "title")
-        
         if let delegate = delegate {
             
             delegate.AddToCart(desc: desc.text!, cost: cost.text! , images: images.image!, qunt: qunt.text!, Title: Title.text!, index: cellIndex)

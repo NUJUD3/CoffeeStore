@@ -129,8 +129,5 @@ class SuppliesCellTableViewController: UITableViewController, CartDelegate {
         
         let cartVC = segue.destination as! CartTableViewController
             cartVC.cartItems = cartItems
-        
-//        let coffeeVC = segue.destination as! coffeeTableViewController
-//            coffeeVC.cartItems = cartItems
     }
 }

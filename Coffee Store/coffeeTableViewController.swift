@@ -16,14 +16,12 @@ struct coffee {
 }
 
 class coffeeTableViewController: UITableViewController, CartDelegate {
-    
-    
-    
+  
     var curtIndex = 0
-    var cartItems = [coffee]()
-    
+    var cartItem = [coffee]()
     func AddToCart(desc: String!, cost: String, images: UIImage, qunt: String, Title: String, index: Int) {
-            cartItems.append(spcialtyCoffee[index])
+        spcialtyCoffee[index].qunt = qunt
+        cartItem.append(spcialtyCoffee[index])
     }
     
     var spcialtyCoffee = [coffee(Title: "شارع القدية",
@@ -145,8 +143,8 @@ class coffeeTableViewController: UITableViewController, CartDelegate {
         func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-//        let cartVC = segue.destination as! CartTableViewController
-//        cartVC.cartItems = cartItems
+            let secCartVC = segue.destination as! SecCartTableViewController
+            secCartVC.cart = cartItem
     }
 }
 }

@@ -18,6 +18,7 @@
 		F2B6AE1F272E80F900166D23 /* SuppliesCellTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B6AE1E272E80F900166D23 /* SuppliesCellTableViewController.swift */; };
 		F2B6AE21272E93D300166D23 /* coffeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B6AE20272E93D300166D23 /* coffeeTableViewController.swift */; };
 		F2B6AE23272EAC3500166D23 /* CartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B6AE22272EAC3500166D23 /* CartTableViewController.swift */; };
+		F2B6AE252731986400166D23 /* SecCartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B6AE242731986400166D23 /* SecCartTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		F2B6AE1E272E80F900166D23 /* SuppliesCellTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppliesCellTableViewController.swift; sourceTree = "<group>"; };
 		F2B6AE20272E93D300166D23 /* coffeeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coffeeTableViewController.swift; sourceTree = "<group>"; };
 		F2B6AE22272EAC3500166D23 /* CartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewController.swift; sourceTree = "<group>"; };
+		F2B6AE242731986400166D23 /* SecCartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecCartTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				F2B6AE1E272E80F900166D23 /* SuppliesCellTableViewController.swift */,
 				F2B6AE20272E93D300166D23 /* coffeeTableViewController.swift */,
 				F2B6AE22272EAC3500166D23 /* CartTableViewController.swift */,
+				F2B6AE242731986400166D23 /* SecCartTableViewController.swift */,
 				F2B6AE08272E6E4A00166D23 /* ViewController.swift */,
 				F2B6AE0A272E6E4A00166D23 /* Main.storyboard */,
 				F2B6AE18272E778D00166D23 /* SuppliesTableViewCell.swift */,
@@ -160,6 +163,7 @@
 				F2B6AE05272E6E4A00166D23 /* AppDelegate.swift in Sources */,
 				F2B6AE21272E93D300166D23 /* coffeeTableViewController.swift in Sources */,
 				F2B6AE1A272E778D00166D23 /* SuppliesTableViewCell.swift in Sources */,
+				F2B6AE252731986400166D23 /* SecCartTableViewController.swift in Sources */,
 				F2B6AE07272E6E4A00166D23 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
