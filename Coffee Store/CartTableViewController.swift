@@ -46,9 +46,9 @@ class CartTableViewController: UITableViewController {
         let suppliescell = tableView.dequeueReusableCell(withIdentifier: "SuppliesCell", for: indexPath) as! SuppliesTableViewCell
         suppliescell.Title.text = cartItems[indexPath.row].Title
         suppliescell.desc.text = cartItems[indexPath.row].desc
-        suppliescell.cost.text = String(cartItems[indexPath.row].cost)
+        suppliescell.cost.text = String ("\(cartItems[indexPath.row].cost) SR")
         suppliescell.images.image = cartItems[indexPath.row].images
-        suppliescell.qunt.text = cartItems[indexPath.row].qunt
+        suppliescell.qunt.text = String (cartItems[indexPath.row].qunt)
         suppliescell.buttonadd.isHidden = true
         return suppliescell
     
