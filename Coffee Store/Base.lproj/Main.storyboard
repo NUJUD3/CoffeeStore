@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iDq-hA-eSI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Accssories-->
+        <scene sceneID="J2F-jg-5Ui">
+            <objects>
+                <tableViewController id="spX-Ug-M3o" customClass="SuppliesCellTableViewController" customModule="Coffee_Store" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="San-af-Dui">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="spX-Ug-M3o" id="EhP-8O-oRY"/>
+                            <outlet property="delegate" destination="spX-Ug-M3o" id="FbG-Yl-trp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Accssories" id="tfY-nM-2h3">
+                        <barButtonItem key="leftBarButtonItem" title="Cart" id="Exz-F0-J9w">
+                            <connections>
+                                <segue destination="abF-2o-7a5" kind="show" identifier="acSegue" id="l7u-A6-i87"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Help" image="headphonesmall" id="O2y-Q5-IxJ">
+                            <connections>
+                                <segue destination="zTz-Om-kRN" kind="show" id="pwm-5Z-xWr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YXk-q4-UwA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2318.840579710145" y="77.678571428571431"/>
+        </scene>
+        <!--Cart Table View Controller-->
+        <scene sceneID="9V7-iI-Pp6">
+            <objects>
+                <tableViewController storyboardIdentifier="CartViewID" id="abF-2o-7a5" customClass="CartTableViewController" customModule="Coffee_Store" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="9ey-Mu-NJ1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="abF-2o-7a5" id="W8T-qM-sjv"/>
+                            <outlet property="delegate" destination="abF-2o-7a5" id="JFg-Ar-iP1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="TcD-1q-Qb2"/>
+                    <connections>
+                        <outlet property="cart" destination="9ey-Mu-NJ1" id="bNL-jT-uXd"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SVX-BI-TZ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1320" y="867"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MmV-bS-QL2">
+            <objects>
+                <viewController id="zTz-Om-kRN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yZY-cd-CbC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Help Center" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQT-Vw-gZz">
+                                <rect key="frame" x="47" y="387" width="321" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eMa-m6-vYh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="P2m-HC-2J4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rkm-WT-6lv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2005.7971014492755" y="866.51785714285711"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Kcc-Ae-HRR">
+            <objects>
+                <tabBarController id="iDq-hA-eSI" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EmF-jq-aii">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.58374763259999995" green="0.4927564968" blue="0.28285265700000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="lAQ-75-oc6" kind="relationship" relationship="viewControllers" id="TAL-AI-lza"/>
+                        <segue destination="0P7-0z-n17" kind="relationship" relationship="viewControllers" id="rAt-rC-0tR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BLL-Vn-Eie" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96" y="-603"/>
+        </scene>
+        <!--Specialty Coffee-->
+        <scene sceneID="H1y-7Y-XfC">
+            <objects>
+                <tableViewController id="sJ8-Hr-kp7" customClass="coffeeTableViewController" customModule="Coffee_Store" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="dbD-Gf-JMD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="sJ8-Hr-kp7" id="jwr-Ev-lMJ"/>
+                            <outlet property="delegate" destination="sJ8-Hr-kp7" id="vh7-ar-drO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Specialty Coffee" prompt="Tickle Your Brain" id="36r-Og-Xpt">
+                        <barButtonItem key="leftBarButtonItem" title="Cart" id="Nh2-lC-sod">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="abF-2o-7a5" kind="show" identifier="spSegue" id="tSP-l2-82s"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Help" image="headphonesmall" id="eyy-yv-1Iz">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="zTz-Om-kRN" kind="show" id="kiU-qy-irE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sm1-4a-8cc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="450.72463768115944" y="85.714285714285708"/>
+        </scene>
+        <!--Accssories-->
+        <scene sceneID="TrJ-wV-qqC">
+            <objects>
+                <navigationController id="lAQ-75-oc6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Accssories" id="hDN-ff-aqx"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" largeTitles="YES" id="LNe-XK-v1l">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.58374763259999995" green="0.4927564968" blue="0.28285265700000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="1" green="0.91026911850000003" blue="0.75443278709999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                            <color key="textColor" red="1" green="0.84412590190000003" blue="0.48454613130000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                            <color key="textColor" red="1" green="0.91026911850000003" blue="0.75443278709999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="spX-Ug-M3o" kind="relationship" relationship="rootViewController" id="4sc-m4-cg3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AiC-yg-P8w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1428.985507246377" y="77.678571428571431"/>
+        </scene>
+        <!--Specialty Coffee-->
+        <scene sceneID="E8s-u9-cTU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0P7-0z-n17" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Specialty Coffee" id="wjn-CA-xxx"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" largeTitles="YES" id="qRA-1F-cOU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.58374763259999995" green="0.4927564968" blue="0.28285265700000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="1" green="0.91026911850000003" blue="0.75443278709999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="0.84412590190000003" blue="0.48454613130000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                            <color key="textColor" red="1" green="0.91026911850000003" blue="0.75443278709999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sJ8-Hr-kp7" kind="relationship" relationship="rootViewController" id="2xm-k1-qru"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DPo-8C-HwJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-459.4202898550725" y="85.714285714285708"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="pwm-5Z-xWr"/>
+        <segue reference="tSP-l2-82s"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="headphonesmall" width="26" height="26"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
