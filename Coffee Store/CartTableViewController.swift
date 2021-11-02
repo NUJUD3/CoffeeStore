@@ -8,53 +8,14 @@ import UIKit
 
 class CartTableViewController: UITableViewController {
     
-    var spcialtyCoffee = [coffee(Title: "شارع القدية",
-                                 desc: "500g محمصة الرياض",
-                                 cost: 120.00,
-                                 images: UIImage(named: "ged Small")),
-                         coffee(Title: "خلطة جبل طويق",
-                                desc: "500g محمصة الرياض",
-                                cost: 120.00,
-                                images: UIImage(named: "Tuwiq Small")),
-                          coffee(Title: "شارع الشميسي",
-                                 desc: "250g محمصة الرياض",
-                                 cost: 72.00,
-                                 images: UIImage(named: "shumisi Small")),
-                          coffee(Title: " اثيوبيا شالا ",
-                                 desc: "250g محمصة أكتوبر",
-                                 cost: 57.00,
-                                 images: UIImage(named: "chal Small")),
-                          coffee(Title: "هامبيلا",
-                                 desc: "250g محمصة أكتوبر",
-                                 cost: 63.00,
-                                 images: UIImage(named: "Hamp Small")),
-                          coffee(Title: "شيربيسا",
-                                 desc: "250g محمصة أكتوبر",
-                                 cost: 60.00,
-                                 images: UIImage(named: "cher Small")),
-                          coffee(Title: "سيلفادور",
-                                 desc: "250g محمصة كفّه",
-                                 cost: 46.00,
-                                 images: UIImage(named: "selfador Small")),
-                          coffee(Title: "كيانزا",
-                                 desc: "250g محمصة كفّه",
-                                 cost: 54.00,
-                                 images: UIImage(named: "kyanza Small")),
-                          coffee(Title: "واكو",
-                                 desc: "250g محمصة كفّه",
-                                 cost: 59.00,
-                                 images: UIImage(named: "wako Small"))
-    ]
-    
-
     @IBOutlet var cart: UITableView!
     
-    var cartItems: [Int] = []
-    
+    var cartItems = [coffee]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        tableView.register(UINib(nibName: "SuppliesTableViewCell", bundle: nil), forCellReuseIdentifier: "SuppliesCell")
+        tableView.rowHeight = 150
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -63,10 +24,8 @@ class CartTableViewController: UITableViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        if let cartItems = UserDefaults.standard.object(forKey: "Cart") {
-            self.cartItems = cartItems as! [Int]
-            print (cartItems)
-        }
+        tableView.reloadData()
+        
     }
     
     // MARK: - Table view data source
@@ -83,10 +42,16 @@ class CartTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        let index = cartItems[indexPath.row]
-        cell.textLabel?.text = spcialtyCoffee[index].Title
-        return cell
+        
+        let suppliescell = tableView.dequeueReusableCell(withIdentifier: "SuppliesCell", for: indexPath) as! SuppliesTableViewCell
+        suppliescell.Title.text = cartItems[indexPath.row].Title
+        suppliescell.desc.text = cartItems[indexPath.row].desc
+        suppliescell.cost.text = String(cartItems[indexPath.row].cost)
+        suppliescell.images.image = cartItems[indexPath.row].images
+        suppliescell.qunt.text = cartItems[indexPath.row].qunt
+        suppliescell.buttonadd.isHidden = true
+        return suppliescell
+    
     }
     
 
@@ -98,17 +63,16 @@ class CartTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            
+            cartItems.remove(at: indexPath.row)
+            tableView.reloadData()
+           
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
@@ -134,5 +98,5 @@ class CartTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+}
 }

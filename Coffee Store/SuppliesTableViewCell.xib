@@ -89,19 +89,20 @@
                     <constraint firstItem="uGg-47-Svp" firstAttribute="bottom" secondItem="MUl-M0-Dk7" secondAttribute="bottom" constant="6" id="D5O-uc-b1X"/>
                     <constraint firstItem="auX-Ft-GgQ" firstAttribute="top" secondItem="MUl-M0-Dk7" secondAttribute="top" constant="-3" id="FZC-Zf-D1I"/>
                     <constraint firstItem="sGZ-J0-N3l" firstAttribute="centerY" secondItem="MUl-M0-Dk7" secondAttribute="centerY" constant="6.5" id="Kfr-Dq-btP"/>
-                    <constraint firstItem="mQn-fD-0Th" firstAttribute="top" secondItem="A3L-xP-B34" secondAttribute="bottom" constant="14" id="SpD-zm-K0K"/>
                     <constraint firstItem="auX-Ft-GgQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="27" id="UEX-vo-XR1"/>
                     <constraint firstItem="auX-Ft-GgQ" firstAttribute="leading" secondItem="MUl-M0-Dk7" secondAttribute="trailing" constant="31" id="XT2-fb-haR"/>
                     <constraint firstAttribute="trailingMargin" secondItem="uGg-47-Svp" secondAttribute="trailing" constant="189" id="ZYC-2z-f8j"/>
                     <constraint firstItem="sGZ-J0-N3l" firstAttribute="leading" secondItem="MUl-M0-Dk7" secondAttribute="trailing" constant="31" id="bqk-SO-cBH"/>
                     <constraint firstAttribute="trailingMargin" secondItem="mQn-fD-0Th" secondAttribute="trailing" constant="30.5" id="cpu-oG-vrL"/>
                     <constraint firstAttribute="bottomMargin" secondItem="mQn-fD-0Th" secondAttribute="bottom" constant="53.5" id="ktu-iC-JAG"/>
+                    <constraint firstItem="mQn-fD-0Th" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="65" id="rTr-Qq-E1z"/>
                     <constraint firstItem="A3L-xP-B34" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="s6i-GE-TDV"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="Title" destination="auX-Ft-GgQ" id="10B-Eb-4ce"/>
+                <outlet property="buttonadd" destination="A3L-xP-B34" id="n2c-Ed-7KW"/>
                 <outlet property="cost" destination="uGg-47-Svp" id="dEk-Ld-ntN"/>
                 <outlet property="desc" destination="sGZ-J0-N3l" id="HwA-3Q-JBD"/>
                 <outlet property="images" destination="MUl-M0-Dk7" id="gKC-B1-Az5"/>

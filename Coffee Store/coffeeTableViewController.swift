@@ -6,14 +6,26 @@
 //
 
 import UIKit
+
 struct coffee {
     var Title : String
     var desc : String!
     var cost : Double
     var images : UIImage!
+    var qunt : String!
 }
-class coffeeTableViewController: UITableViewController {
 
+class coffeeTableViewController: UITableViewController, CartDelegate {
+    
+    
+    
+    var curtIndex = 0
+    var cartItems = [coffee]()
+    
+    func AddToCart(desc: String!, cost: String, images: UIImage, qunt: String, Title: String, index: Int) {
+            cartItems.append(spcialtyCoffee[index])
+    }
+    
     var spcialtyCoffee = [coffee(Title: "شارع القدية",
                                  desc: "500g محمصة الرياض",
                                  cost: 120.00,
@@ -51,6 +63,8 @@ class coffeeTableViewController: UITableViewController {
                                  cost: 59.00,
                                  images: UIImage(named: "wako Small"))
     ]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "SuppliesTableViewCell", bundle: nil), forCellReuseIdentifier: "SuppliesCell")
@@ -81,11 +95,13 @@ class coffeeTableViewController: UITableViewController {
         coffeeCell.desc.text = spcialtyCoffee [indexPath.row].desc
         coffeeCell.cost.text = String ("\(spcialtyCoffee[indexPath.row].cost) SR")
         coffeeCell.images.image = spcialtyCoffee[indexPath.row].images
-
+        coffeeCell.delegate = self
+        coffeeCell.cellIndex = indexPath.row
         return coffeeCell
     }
     
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        curtIndex = indexPath.row
 
     /*
     // Override to support conditional editing of the table view.
@@ -122,14 +138,15 @@ class coffeeTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+//        let cartVC = segue.destination as! CartTableViewController
+//        cartVC.cartItems = cartItems
     }
-    */
-
+}
 }
