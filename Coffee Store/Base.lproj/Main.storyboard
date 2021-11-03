@@ -73,7 +73,14 @@
                             <outlet property="delegate" destination="abF-2o-7a5" id="JFg-Ar-iP1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="TcD-1q-Qb2"/>
+                    <navigationItem key="navigationItem" id="TcD-1q-Qb2">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="trash" catalog="system" id="MvN-8k-ezx">
+                            <color key="tintColor" red="1" green="0.91026911850000003" blue="0.75443278709999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="deletAll:" destination="abF-2o-7a5" id="Xt5-w8-Qt8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="cart" destination="9ey-Mu-NJ1" id="bNL-jT-uXd"/>
                     </connections>
@@ -219,6 +226,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="headphonesmall" width="26" height="26"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

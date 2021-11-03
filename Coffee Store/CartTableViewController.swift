@@ -8,6 +8,10 @@ import UIKit
 
 class CartTableViewController: UITableViewController {
     
+    @IBAction func deletAll(_ sender: Any) {
+        cartItems.removeAll()
+        tableView.reloadData()
+    }
     @IBOutlet var cart: UITableView!
     
     var cartItems = [coffee]()

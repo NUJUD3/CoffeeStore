@@ -47,6 +47,7 @@ class SecCartTableViewController: UITableViewController {
         coffeeCell.desc.text = cart [indexPath.row].desc
         coffeeCell.cost.text = String ("\(cart[indexPath.row].cost) SR")
         coffeeCell.images.image = cart[indexPath.row].images
+        coffeeCell.qunt.text = String (cart[indexPath.row].qunt)
         return coffeeCell
     }
     
