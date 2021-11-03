@@ -22,15 +22,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Accssories" id="tfY-nM-2h3">
-                        <barButtonItem key="leftBarButtonItem" title="Cart" id="Exz-F0-J9w">
-                            <color key="tintColor" red="1" green="0.91026911850000003" blue="0.75443278709999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cart" image="shop3" id="Exz-F0-J9w">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="abF-2o-7a5" kind="show" identifier="acSegue" id="l7u-A6-i87"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Help" image="headphonesmall" id="O2y-Q5-IxJ">
                             <connections>
-                                <segue destination="zTz-Om-kRN" kind="show" id="pwm-5Z-xWr"/>
+                                <segue destination="zTz-Om-kRN" kind="show" identifier="suppliesSegue" id="pwm-5Z-xWr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -154,8 +154,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Specialty Coffee" prompt="Tickle Your Brain" id="36r-Og-Xpt">
-                        <barButtonItem key="leftBarButtonItem" title="Cart" id="Nh2-lC-sod">
-                            <color key="tintColor" red="1" green="0.91026911850000003" blue="0.75443278709999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <barButtonItem key="leftBarButtonItem" image="shop3" id="Nh2-lC-sod">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="ZzT-m3-t7M" kind="show" identifier="coffeeID" id="xpa-rC-6HM"/>
                             </connections>
@@ -234,6 +234,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="headphonesmall" width="26" height="26"/>
+        <image name="shop3" width="170.5" height="170.5"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
