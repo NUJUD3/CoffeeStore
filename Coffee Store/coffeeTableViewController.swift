@@ -19,6 +19,7 @@ class coffeeTableViewController: UITableViewController, CartDelegate {
   
     var curtIndex = 0
     var cartItem = [coffee]()
+    
     func AddToCart(desc: String!, cost: String, images: UIImage, qunt: String, Title: String, index: Int) {
         spcialtyCoffee[index].qunt = qunt
         cartItem.append(spcialtyCoffee[index])
@@ -100,7 +101,8 @@ class coffeeTableViewController: UITableViewController, CartDelegate {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         curtIndex = indexPath.row
-
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -140,11 +142,10 @@ class coffeeTableViewController: UITableViewController, CartDelegate {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-            let secCartVC = segue.destination as! SecCartTableViewController
-            secCartVC.cart = cartItem
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if (segue.identifier == "coffeeID") {
+                let secCartVC = segue.destination as! SecCartTableViewController
+                secCartVC.cart = cartItem
+            }
     }
-}
 }

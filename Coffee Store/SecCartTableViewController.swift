@@ -9,6 +9,10 @@ import UIKit
 
 class SecCartTableViewController: UITableViewController {
     
+    @IBAction func deleteAll(_ sender: Any) {
+        cart.removeAll()
+        tableView.reloadData()
+    }
     @IBOutlet var secCart: UITableView!
     
     var cart = [coffee]()
@@ -17,11 +21,8 @@ class SecCartTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "SuppliesTableViewCell", bundle: nil), forCellReuseIdentifier: "SuppliesCell")
         tableView.rowHeight = 150
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        print (cart.count)
     }
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
@@ -85,14 +86,9 @@ class SecCartTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

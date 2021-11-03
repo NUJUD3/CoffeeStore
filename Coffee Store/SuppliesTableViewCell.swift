@@ -51,15 +51,6 @@ class SuppliesTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-        
-        
-//        UserDefaults.standard.object(forKey: "save")
-//       let save = UserDefaults.standard.object(forKey: "save")
-//           qunt.text = save as? String
 
-        // Configure the view for the selected state
-//    }
     
 }

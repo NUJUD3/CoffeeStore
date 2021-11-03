@@ -23,6 +23,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Accssories" id="tfY-nM-2h3">
                         <barButtonItem key="leftBarButtonItem" title="Cart" id="Exz-F0-J9w">
+                            <color key="tintColor" red="1" green="0.91026911850000003" blue="0.75443278709999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="abF-2o-7a5" kind="show" identifier="acSegue" id="l7u-A6-i87"/>
                             </connections>
@@ -51,7 +52,14 @@
                             <outlet property="delegate" destination="ZzT-m3-t7M" id="7ap-K2-3Sk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="bdG-XE-P0r"/>
+                    <navigationItem key="navigationItem" id="bdG-XE-P0r">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="trash" catalog="system" id="XaI-Xb-FDL">
+                            <color key="tintColor" red="1" green="0.91026911850000003" blue="0.75443278709999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="deleteAll:" destination="ZzT-m3-t7M" id="oa2-gI-G82"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="secCart" destination="leB-vE-D2V" id="gDL-Wq-4Qg"/>
                     </connections>
@@ -147,9 +155,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Specialty Coffee" prompt="Tickle Your Brain" id="36r-Og-Xpt">
                         <barButtonItem key="leftBarButtonItem" title="Cart" id="Nh2-lC-sod">
-                            <color key="tintColor" systemColor="tintColor"/>
+                            <color key="tintColor" red="1" green="0.91026911850000003" blue="0.75443278709999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <segue destination="ZzT-m3-t7M" kind="show" id="xpa-rC-6HM"/>
+                                <segue destination="ZzT-m3-t7M" kind="show" identifier="coffeeID" id="xpa-rC-6HM"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Help" image="headphonesmall" id="eyy-yv-1Iz">
@@ -222,16 +230,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kiU-qy-irE"/>
+        <segue reference="pwm-5Z-xWr"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="headphonesmall" width="26" height="26"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
