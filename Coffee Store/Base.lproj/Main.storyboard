@@ -22,8 +22,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Accssories" id="tfY-nM-2h3">
-                        <barButtonItem key="leftBarButtonItem" title="Cart" image="shop3" id="Exz-F0-J9w">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cart" image="cart" id="Exz-F0-J9w">
+                            <color key="tintColor" red="1" green="0.91026911850000003" blue="0.75443278709999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="abF-2o-7a5" kind="show" identifier="acSegue" id="l7u-A6-i87"/>
                             </connections>
@@ -154,8 +154,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Specialty Coffee" prompt="Tickle Your Brain" id="36r-Og-Xpt">
-                        <barButtonItem key="leftBarButtonItem" image="shop3" id="Nh2-lC-sod">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cart" image="cart" id="Nh2-lC-sod">
+                            <color key="tintColor" red="1" green="0.91026911850000003" blue="0.75443278709999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="ZzT-m3-t7M" kind="show" identifier="coffeeID" id="xpa-rC-6HM"/>
                             </connections>
@@ -176,7 +176,7 @@
         <scene sceneID="TrJ-wV-qqC">
             <objects>
                 <navigationController id="lAQ-75-oc6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Accssories" id="hDN-ff-aqx"/>
+                    <tabBarItem key="tabBarItem" title="Accssories" image="coffee-machine-icon-9.jpg-3" id="hDN-ff-aqx"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" largeTitles="YES" id="LNe-XK-v1l">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -204,7 +204,7 @@
         <scene sceneID="E8s-u9-cTU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0P7-0z-n17" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Specialty Coffee" id="wjn-CA-xxx"/>
+                    <tabBarItem key="tabBarItem" title="Specialty Coffee" image="3086349-5" id="wjn-CA-xxx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" largeTitles="YES" id="qRA-1F-cOU">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -230,11 +230,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pwm-5Z-xWr"/>
+        <segue reference="kiU-qy-irE"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="3086349-5" width="26.5" height="26.5"/>
+        <image name="cart" width="30" height="30"/>
+        <image name="coffee-machine-icon-9.jpg-3" width="26.5" height="26.5"/>
         <image name="headphonesmall" width="26" height="26"/>
-        <image name="shop3" width="170.5" height="170.5"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
