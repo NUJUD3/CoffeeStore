@@ -12,7 +12,8 @@ This is a simple Coffee Store app that you can oreder your favorite coffee suppl
 - Users can having quantities when they order supplise. 
 - Users can delete \ delete all supplise from cart.
 
-#Favorite Function 
+
+##Favorite Function 
 Function inside protocol that send the table cell from table view to another. 
 # Issues 
 I try to add UserDefulte in cart, but I have some issues and it doesn't work.
